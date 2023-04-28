@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "e698f0a9-18a3-4304-82b9-bfb3d5a1f280",
+		"name": "assessment-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25879507"
+	},
+	"item": [
+		{
+			"name": "crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3kzbGVvczAwMDA1NW93eDdneno4ejAiLCJpYXQiOjE2ODI1Mzc4NTEsImV4cCI6MTcxNDA3Mzg1MX0.OATp6Y6BJCIUUnNqDO1ktNlZ1p7XYg-m-tIVICztfM0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Contraseña1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/local/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"local",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3kzbGVvczAwMDA1NW93eDdneno4ejAiLCJpYXQiOjE2ODI1Mzc4NTEsImV4cCI6MTcxNDA3Mzg1MX0.OATp6Y6BJCIUUnNqDO1ktNlZ1p7XYg-m-tIVICztfM0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Contraseña1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/local/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"local",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear lista",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3p1ajVzbzAwMDA1NTZzaDJldjlmM2ciLCJpYXQiOjE2ODI2NDM4MTZ9.ZosuH3pWkbqZmX1DLcCsIR1vl_5b4XjGLCtNYj568CA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mi nueva lista 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar lista",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3p1ajVzbzAwMDA1NTZzaDJldjlmM2ciLCJpYXQiOjE2ODI2NDM4MTZ9.ZosuH3pWkbqZmX1DLcCsIR1vl_5b4XjGLCtNYj568CA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"clgzuznnq0003556sixyicrbu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener las listas de un usuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3p1ajVzbzAwMDA1NTZzaDJldjlmM2ciLCJpYXQiOjE2ODI2NDM4MTZ9.ZosuH3pWkbqZmX1DLcCsIR1vl_5b4XjGLCtNYj568CA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"list"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3loczVudjAwMDY1NTRrNmZ6aGVzN2MiLCJpYXQiOjE2ODI1NjE2ODB9.lhphXDb7Ghaf3-7PX6ozGS0M2tcgKzJX7PC4p3Ys14w",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear item de lista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"favorite_list\":\"clgzv6dd40005556skmxf9qrm\",\r\n    \"favorite_item\":\"clgypoa91000b55x4quge8giv\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/favorite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar item de lista ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"clgzvh1rv000b556s10q0r3a9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/favorite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener los items de una lista ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"favorite_list\":\"clgzv6dd40005556skmxf9qrm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/favorite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar email de usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3p1ajVzbzAwMDA1NTZzaDJldjlmM2ciLCJpYXQiOjE2ODI2NDM4MTZ9.ZosuH3pWkbqZmX1DLcCsIR1vl_5b4XjGLCtNYj568CA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"minuevoemail@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar password de usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3loczVudjAwMDY1NTRrNmZ6aGVzN2MiLCJpYXQiOjE2ODI1Njc1MjJ9.ydBRurLy-Hnu4HkD-lZI0bylGiQuIMAQKiT3YRQMBaM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_password\":\"camilo\",\r\n    \"new_password\":\"adrian\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsZ3lwZGZ4ajAwMDA1NXZzdTFkdjFjMmEiLCJpYXQiOjE2ODI1NzQ0MzB9.FerKO1FgwNi8nG4ecVpfJRkUIG7OCqLR_GrFo3BzKZo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"password\":\"1234\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener todos los items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

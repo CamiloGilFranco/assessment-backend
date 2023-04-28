@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id             String           @id @default(cuid())
+  email          String           @unique
+  password       String
+  favorite_lists favorite_lists[]
+}
+
+model favorite_lists {
+  id            String                    @id @default(cuid())
+  list_name     String
+  favorite_item favorite_items_per_list[]
+  users         users?                    @relation(fields: [usersId], references: [id])
+  usersId       String?
+}
+
+model favorite_items {
+  id            String                    @id @default(cuid())
+  title         String
+  description   String
+  link          String
+  item_per_list favorite_items_per_list[]
+}
+
+model favorite_items_per_list {
+  id               String          @id @default(cuid())
+  favorite_lists   favorite_lists? @relation(fields: [favorite_listsId], references: [id])
+  favorite_listsId String?
+  favorite_items   favorite_items? @relation(fields: [favorite_itemsId], references: [id])
+  favorite_itemsId String?
+}
