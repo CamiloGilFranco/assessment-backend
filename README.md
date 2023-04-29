@@ -4,6 +4,7 @@
 
 - [API FAVS (Assessment-Backend)](#api-favs-assessment-backend)
   - [Indice](#indice)
+  - [Introducción](#introducción)
   - [Base de datos](#base-de-datos)
   - [Primeros pasos](#primeros-pasos)
   - [Funcionalidades](#funcionalidades)
@@ -19,6 +20,20 @@
     - [Actualizar contraseña de usuario](#actualizar-contraseña-de-usuario)
     - [Eliminar de usuario](#eliminar-de-usuario)
   - [Preguntas](#preguntas)
+
+## Introducción
+
+¡Bienvenido a la documentación de la API FAVS! Esta API está diseñada para permitir el desarrollo frontend de una aplicación que brinde a los usuarios funciones como crear, modificar y eliminar sus propias listas de favoritos, así como realizar otras acciones relacionadas con su cuenta de usuario.
+
+La API se ha desarrollado utilizando tecnologías modernas como Node.js, Express, JWT y Bcrypt, lo que garantiza la seguridad y escalabilidad de la aplicación. La autenticación se gestiona mediante JWT y Bcrypt, lo que garantiza que solo los usuarios autenticados puedan realizar acciones en su propia cuenta y lista de favoritos.
+
+Es importante destacar que en las respuestas a las peticiones, el dato predominante es el id de las listas o ítems para facilitar el manejo desde el frontend.
+
+En esta documentación, se proporciona una descripción detallada de todas las funciones disponibles en la API, incluidos los parámetros de entrada requeridos y las respuestas de salida esperadas. También se incluyen ejemplos de solicitudes y respuestas en formato JSON.
+
+Es importante mencionar que para la eliminación de usuarios y la modificación de contraseñas, se solicita la confirmación de la contraseña actual del usuario para garantizar la seguridad de la cuenta.
+
+¡Esperamos que esta documentación te ayude a comprender y utilizar la API FAVS! Si tienes alguna pregunta o problema, no dudes en ponerte en contacto [LinkedIn](https://www.linkedin.com/in/adrian-camilo-gil-franco/)
 
 ## Base de datos
 
@@ -525,9 +540,16 @@ Si la petición es exitosa, la respuesta incluirá el email del usuario eliminad
 1. Indique cuales son las partes de la siguiente url: https://backend.mega-app.com.co:8080/api/articles/search?docid=1020&hl=en#dayone
    ![](assets/url.png)
 
+- **PROTOCOLO:** http://
+- **DOMINIO:** backend.mega-app.com.co
+- **PUERTO:** :8080
+- **RUTA:** /api/articles/
+- **PARÁMETROS DE BÚSQUEDA:** search?docid=1020&hl=en
+- **ETIQUETA:** #dayone
+
 2. Definir qué es una Web API, Restful y cuáles son los códigos de estado 200-, 400-, 500-
 
-   una Web API Es una interfaz de programación de aplicaciones que utiliza el protocolo HTTP para permitir que diferentes aplicaciones se comuniquen y compartan información a través de la web.
+   REST (Representational State Transfer) es un estilo de arquitectura de software que se utiliza para crear servicios web escalables y mantenibles. Una API RESTful es una interfaz de programación de aplicaciones que sigue los principios de REST y utiliza el protocolo HTTP para permitir que diferentes aplicaciones se comuniquen y compartan información a través de la web.
 
    Los código 200 indican que la solicitud ha sido exitosa, los 400 indican un error en la solicitud del cliente y los 500 indican un error interno del servidor.
 
